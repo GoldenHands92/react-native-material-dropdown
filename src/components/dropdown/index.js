@@ -302,13 +302,13 @@ export default class Dropdown extends PureComponent {
               useNativeDriver,
             })
             .start(() => {
-              if (this.mounted && 'ios' === Platform.OS) {
-                let { flashScrollIndicators } = this.scroll || {};
+              // if (this.mounted && 'ios' === Platform.OS) {
+              //   let { flashScrollIndicators } = this.scroll || {};
 
-                if ('function' === typeof flashScrollIndicators) {
-                  flashScrollIndicators.call(this.scroll);
-                }
-              }
+              //   if ('function' === typeof flashScrollIndicators) {
+              //     flashScrollIndicators.call(this.scroll);
+              //   }
+              // }
             });
         }
       }), delay);
@@ -459,9 +459,9 @@ export default class Dropdown extends PureComponent {
       }
     }
 
-    if (this.scroll) {
-      this.scroll.scrollToOffset({ offset, animated: false });
-    }
+    // if (this.scroll) {
+    //   this.scroll.scrollToOffset({ offset, animated: false });
+    // }
   }
 
   updateRef(name, ref) {
